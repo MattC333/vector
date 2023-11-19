@@ -1,0 +1,54 @@
+site_name: vector
+repo_url: https://github.com/MattC333/vector
+site_url: https://MattC333.github.io/vector
+site_description: Demo project to test Vecotor Search
+site_author: Matt C
+edit_uri: edit/main/docs/
+repo_name: MattC333/vector
+copyright: Maintained by <a href="https://MattC333.com">Florian</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+            setup_commands:
+                - import sys
+                - sys.path.append('../')
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MattC333/vector
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/vector
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
